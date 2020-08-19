@@ -112,7 +112,9 @@ systemctl enable fail2ban.service
 systemctl start fail2ban.service
 ```
 
-Congratulations! You've secured your ssh port from unauthorized access. We've changed the default port, restricted access by password, rate-limited the port as well as enabled fail2ban to deny access to repeat offenders. You can see the difference we've made by checking your SSH logs from time to time with `journalctl -u ssh`. Happy mining!
+We've changed the default port, restricted access by password, rate-limited the port as well as enabled fail2ban to deny access to repeat offenders. You can see the difference we've made by checking your SSH logs from time to time with `journalctl -u ssh`.  
+
+Congratulations! You've secured your ssh port from unauthorized access. Happy mining!
 
 
 
