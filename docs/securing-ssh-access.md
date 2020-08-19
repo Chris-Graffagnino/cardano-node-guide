@@ -1,4 +1,4 @@
-# Securing ssh access to a node on Cardano mainnet (Ubuntu 20.04)
+# Securing SSH Access for a Node on Cardano Mainnet
 
 -- DISCLAIMER: This guide is for background educational purposes only.  
 -- DISCLAIMER: By using this guide, you assume sole risk and waive any claims of liability against the author.  
