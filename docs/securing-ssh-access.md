@@ -113,7 +113,7 @@ systemctl start fail2ban.service
 ```
 
 ## What have we done to secure SSH access?
--- Cchanged the default port  
+-- Changed the default port  
 -- Restricted SSH access root user  
 -- Restricted access by password  
 -- Rate-limited the SSH port  
