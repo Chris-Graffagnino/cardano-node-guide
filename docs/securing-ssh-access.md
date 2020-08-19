@@ -1,19 +1,19 @@
 # Securing ssh access to a node on Cardano mainnet (Ubuntu 20.04)
 
--- DISCLAIMER: This guide is for background educational purposes only.
--- DISCLAIMER: By using this guide, you assume sole risk and waive any claims of liability against the author.
+-- DISCLAIMER: This guide is for background educational purposes only.  
+-- DISCLAIMER: By using this guide, you assume sole risk and waive any claims of liability against the author.  
 
--- Note: This guide is for running cardano-node  on a virtual private server (VPS), running Ubuntu 20.04.
--- Note: This guide assumes your local machine is a Mac, but most instructions are executed on the remote machine.
--- Note: anything preceded by "#" is a comment.
--- Note: anything all-caps in between "<>" is an placeholder; e.g. `"<FILENAME>"` could be `"foo.txt"`.
--- Note: anything in between "${}" is a variable that will be evaluated by your shell.
+-- Note: This guide is for running cardano-node  on a virtual private server (VPS), running Ubuntu 20.04.  
+-- Note: This guide assumes your local machine is a Mac, but most instructions are executed on the remote machine.  
+-- Note: anything preceded by "#" is a comment.  
+-- Note: anything all-caps in between "<>" is an placeholder; e.g. `"<FILENAME>"` could be `"foo.txt"`.  
+-- Note: anything in between "${}" is a variable that will be evaluated by your shell.  
 
-* Author: Chris Graffagnino (stake-pool: __MASTR__)
+* Author: Chris Graffagnino (stake-pool: __MASTR__)  
 
-First off, thank you for endeavoring to run a node on Cardano mainnet. You are a pioneer on the next financial operating-system for the world!
+First off, thank you for endeavoring to run a node on Cardano mainnet. You are a pioneer on the next financial operating-system for the world!  
 
-Of course, with great privilege comes great responsibility. We must protect our nodesfrom nefarious actors that try to break in to our servers. Let's get started on our first line of defense - secure SSH access.
+Of course, with great privilege comes great responsibility. We must protect our nodesfrom nefarious actors that try to break in to our servers. Let's get started on our first line of defense - secure SSH access.  
 
 ## Generate private/public ssh keys
 ```
