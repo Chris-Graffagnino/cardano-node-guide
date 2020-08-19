@@ -112,11 +112,16 @@ systemctl enable fail2ban.service
 systemctl start fail2ban.service
 ```
 
-What have we done to secure SSH access? We've changed the default port, restricted access by password, rate-limited the port as well as enabled fail2ban to deny access to repeat offenders. You can see the difference we've made by checking your SSH logs from time to time with `journalctl -u ssh`.  
+## What have we done to secure SSH access?
+-- Cchanged the default port  
+-- Restricted SSH access root user  
+-- Restricted access by password  
+-- Rate-limited the SSH port  
+-- Installed  fail2ban to deny access to repeat offenders.  
+
+## How do I check who's tried to access my SSH port?
+Check your SSH logs from time to time with `journalctl -u ssh`.  
 
 Congratulations! You've secured your ssh port from unauthorized access. Happy mining!
-
-
-
 
 
