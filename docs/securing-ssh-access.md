@@ -9,11 +9,11 @@
 -- Note: anything all-caps in between "<>" is an placeholder; e.g. `"<FILENAME>"` could be `"foo.txt"`.  
 -- Note: anything in between "${}" is a variable that will be evaluated by your shell.  
 
-* Author: Chris Graffagnino (stake-pool: __MASTR__)  
+* Author: Chris Graffagnino, Cardano Ambassador (stake-pool: __MASTR__)  
 
 First off, thank you for endeavoring to run a node on Cardano mainnet. You are a pioneer on the next financial operating-system for the world!  
 
-Of course, with great privilege comes great responsibility. We must protect our nodesfrom nefarious actors that try to break in to our servers. Let's get started on our first line of defense - secure SSH access.  
+Of course, with great privilege comes great responsibility. We must protect our nodes from nefarious actors that try to break in to our servers. Let's get started on our first line of defense - secure SSH access.  
 
 ## Generate private/public ssh keys
 ```
@@ -122,6 +122,7 @@ systemctl start fail2ban.service
 ## How do I check who's tried to access my SSH port?
 Check your SSH logs from time to time with `journalctl -u ssh`.  
 
-Congratulations! You've secured your ssh port from unauthorized access. Happy mining!
+## Congratulations!
+You've secured your ssh port from unauthorized access. If you have any questions, find me on twitter @ChrisGraff, or at the [Cardano Forum](https://forum.cardano.org/c/english/operators-talk/119). Happy mining!
 
 
