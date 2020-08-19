@@ -73,7 +73,8 @@ ufw default allow outgoing
 # Open ssh port (rate limiting enabled - max 10 attempts within 30 seconds)
 ufw limit proto tcp from any to any port <THE PORT YOU JUST CHOSE IN sshd_config>
 
-# Open a port for cardano-node. This is the port other nodes will connect to. Note if this is a block-producing node, consider restricting access to just your relay nodes.
+# Open a port for cardano-node. This is the port other nodes will connect to.  
+# Note if this is a block-producing node, consider restricting access to just your relay nodes.
 ufw allow proto tcp from any to any port <CHOOSE A PORT BETWEEN 1024 AND 65535>
 
 # NOTE: The following may interrupt cardano-node if it is already running.
@@ -89,7 +90,7 @@ service sshd reload
 ```
 
 ## Install fail2ban
-Fail2ban protects our ssh port by silently banning IP addresses that unsucessfully attempt to login over and over. We will configure this to ban the address after three missed attempts.
+Fail2ban protects our ssh port by silently banning IP addresses that unsucessfully attempt to login over and over.
 ```
 # Install fail2ban
 apt install fail2ban
@@ -98,7 +99,7 @@ apt install fail2ban
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
 # Edit the file around line 288 to enable ssh protection (look for "[sshd]")
-# Make this section look like the following
+# Make this section look like the following:
 
 port    = <YOUR NEW SSH PORT>
 logpath = %(sshd_log)s
@@ -111,7 +112,7 @@ systemctl enable fail2ban.service
 systemctl start fail2ban.service
 ```
 
-Congratulations! You've secured your ssh port from unauthorized access.. You can see the difference by checking your ssh logs with `journalctl -u ssh`. Happy mining! 
+Congratulations! You've secured your ssh port from unauthorized access. We've changed the default port, restricted access by password, rate-limited the port as well as enabled fail2ban to deny access to repeat offenders. You can see the difference we've made by checking your SSH logs from time to time with `journalctl -u ssh`. Any questions? Join me on Telegram, here: https://t.me/joinchat/KmwzIBPj1VKXUn-IVOwL_g. Happy mining!
 
 
 
