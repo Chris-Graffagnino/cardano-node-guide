@@ -4,7 +4,7 @@
 -- DISCLAIMER: By using this guide, you assume sole risk and waive any claims of liability against the author.  
 
 -- Note: This guide is for running cardano-node  on a virtual private server (VPS), running Ubuntu 20.04.  
--- Note: This guide assumes your local machine is a Mac, but most instructions are executed on the remote machine.  
+-- Note: This guide assumes your local machine is a *Mac*, but most instructions are executed on the remote machine.  
 -- Note: anything preceded by "#" is a comment.  
 -- Note: anything all-caps in between "<>" is an placeholder; e.g. `"<FILENAME>"` could be `"foo.txt"`.  
 -- Note: anything in between "${}" is a variable that will be evaluated by your shell.  
@@ -19,7 +19,7 @@ Of course, with great privilege comes great responsibility. We must protect our 
 ```
 # Generate private & public keys on your *LOCAL MACHINE* (public key will have a ".pub" extension)
 # When prompted, name it something other than "id_rsa" (in case you're using that somewhere else)
-ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "<YOUR EMAIL HERE>"
+ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C <YOUR EMAIL HERE>
 
 # Lock down private key
 chmod 400 ~/.ssh/<YOUR KEY>
