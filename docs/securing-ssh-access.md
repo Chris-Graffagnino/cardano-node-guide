@@ -123,6 +123,6 @@ systemctl start fail2ban.service
 Check your SSH logs from time to time with `journalctl -u ssh`.  
 
 ## Congratulations!
-If you have any questions, find me on [Twitter](https://twitter.com/ChrisGraff), or at the [Cardano Forum](https://forum.cardano.org/c/english/operators-talk/119). Happy mining!
+If you have any questions, find me on [Twitter](https://twitter.com/ChrisGraff), or at the [Cardano Forum](https://forum.cardano.org/t/securing-ssh-access-to-a-node-on-cardano-mainnet-ubuntu-20-04/38893). Happy mining!
 
 
